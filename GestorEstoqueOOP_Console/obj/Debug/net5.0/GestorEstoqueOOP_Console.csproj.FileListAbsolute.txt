@@ -1,0 +1,16 @@
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\bin\Debug\net5.0\GestorEstoqueOOP_Console.exe
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\bin\Debug\net5.0\GestorEstoqueOOP_Console.deps.json
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\bin\Debug\net5.0\GestorEstoqueOOP_Console.runtimeconfig.json
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\bin\Debug\net5.0\GestorEstoqueOOP_Console.runtimeconfig.dev.json
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\bin\Debug\net5.0\GestorEstoqueOOP_Console.dll
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\bin\Debug\net5.0\ref\GestorEstoqueOOP_Console.dll
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\bin\Debug\net5.0\GestorEstoqueOOP_Console.pdb
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\obj\Debug\net5.0\GestorEstoqueOOP_Console.csproj.AssemblyReference.cache
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\obj\Debug\net5.0\GestorEstoqueOOP_Console.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\obj\Debug\net5.0\GestorEstoqueOOP_Console.AssemblyInfoInputs.cache
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\obj\Debug\net5.0\GestorEstoqueOOP_Console.AssemblyInfo.cs
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\obj\Debug\net5.0\GestorEstoqueOOP_Console.csproj.CoreCompileInputs.cache
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\obj\Debug\net5.0\GestorEstoqueOOP_Console.dll
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\obj\Debug\net5.0\ref\GestorEstoqueOOP_Console.dll
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\obj\Debug\net5.0\GestorEstoqueOOP_Console.pdb
+C:\Users\luish\source\repos\GestorEstoqueOOP_Console\GestorEstoqueOOP_Console\obj\Debug\net5.0\GestorEstoqueOOP_Console.genruntimeconfig.cache
