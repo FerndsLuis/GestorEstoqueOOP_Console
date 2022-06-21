@@ -21,10 +21,21 @@ namespace GestorEstoqueOOP_Console
 
         public void AdicionarEntrada()
         {
+            Console.WriteLine("Não é possível dar entrada por ser um produto digital.");
+            Console.ReadLine();
+           
         }
 
         public void AdicionarSaida()
         {
+            Console.WriteLine($"Adicionar vendas no ebook {nome}");
+            Console.WriteLine("Digite a quantidade de vendas que quer dar entrada: ");
+            int entrada = int.Parse(Console.ReadLine());
+
+            vendas = vendas + entrada;
+
+            Console.WriteLine("Venda Registrada");
+            Console.ReadLine();
         }
 
         public void Exibir()

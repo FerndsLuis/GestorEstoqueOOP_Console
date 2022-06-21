@@ -37,8 +37,10 @@ namespace GestorEstoqueOOP_Console
                             Remover();
                             break;
                         case Menu.Entrada:
+                            Entrada();
                             break;
                         case Menu.Saida:
+                            Saida();
                             break;
                         case Menu.Sair:
                             escolheuSair = true;
@@ -79,6 +81,32 @@ namespace GestorEstoqueOOP_Console
             if (id >= 0 && id < produtos.Count)
             {
                 produtos.RemoveAt(id);
+                Salvar();
+            }
+        }
+
+        static void Entrada()
+        {
+            Listagem();
+            Console.WriteLine("Digite o ID que deseja dar entrada:");
+            int id = int.Parse(Console.ReadLine());
+
+            if (id >= 0 && id < produtos.Count)
+            {
+                produtos[id].AdicionarEntrada();
+                Salvar();
+            }
+        }
+
+        static void Saida()
+        {
+            Listagem();
+            Console.WriteLine("Digite o ID que deseja dar baixa:");
+            int id = int.Parse(Console.ReadLine());
+
+            if (id >= 0 && id < produtos.Count)
+            {
+                produtos[id].AdicionarSaida();
                 Salvar();
             }
         }
