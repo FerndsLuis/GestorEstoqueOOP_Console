@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace GestorEstoqueOOP_Console
 {
@@ -9,6 +11,8 @@ namespace GestorEstoqueOOP_Console
         enum Menu { Listar = 1, Adicionar, Remover, Entrada, Saida, Sair }
         static void Main(string[] args)
         {
+            Carregar();
+
             bool escolheuSair = false;
             while (escolheuSair == false)
             {
@@ -24,11 +28,13 @@ namespace GestorEstoqueOOP_Console
                     switch (escolha)
                     {
                         case Menu.Listar:
+                            Listagem();
                             break;
                         case Menu.Adicionar:
                             Cadastro();
                             break;
                         case Menu.Remover:
+                            Remover();
                             break;
                         case Menu.Entrada:
                             break;
@@ -44,6 +50,36 @@ namespace GestorEstoqueOOP_Console
                     escolheuSair = true;
                 }
                 Console.Clear();
+            }
+        }
+
+        static void Listagem()
+        {
+            Console.WriteLine("Lista de produtos");
+
+            int i = 0;
+
+            foreach(IEstoque produto in produtos)
+            {
+                Console.WriteLine("ID:" + i);
+
+                produto.Exibir();
+                i++;
+            }
+
+            Console.ReadLine();
+        }
+
+        static void Remover()
+        {
+            Listagem();
+            Console.WriteLine("Digite o ID que deseja remover:");
+            int id = int.Parse(Console.ReadLine());
+
+            if (id >= 0 && id < produtos.Count)
+            {
+                produtos.RemoveAt(id);
+                Salvar();
             }
         }
 
@@ -83,6 +119,7 @@ namespace GestorEstoqueOOP_Console
 
             ProdutoFisico pf = new ProdutoFisico(nome, preco, frete);
             produtos.Add(pf);
+            Salvar();
         }
 
         static void CadastrarEbook()
@@ -101,6 +138,7 @@ namespace GestorEstoqueOOP_Console
 
             Ebook eb = new Ebook(nome, preco, autor);
             produtos.Add(eb);
+            Salvar();
         }
 
         static void CadastrarCurso()
@@ -119,6 +157,38 @@ namespace GestorEstoqueOOP_Console
 
             Curso cs = new Curso(nome, preco, autor);
             produtos.Add(cs);
+            Salvar();
+        }
+
+        static void Salvar()
+        {
+            FileStream stream = new FileStream("produtos.dat", FileMode.OpenOrCreate);
+            BinaryFormatter encoder = new BinaryFormatter();
+
+            encoder.Serialize(stream, produtos);
+
+            stream.Close();
+        }
+
+        static void Carregar()
+        {
+            FileStream stream = new FileStream("produtos.dat", FileMode.OpenOrCreate);
+            BinaryFormatter encoder = new BinaryFormatter();
+
+            try
+            {
+                produtos = (List<IEstoque>)encoder.Deserialize(stream);
+                if(produtos == null)
+                {
+                    produtos = new List<IEstoque>();
+                }
+            }
+            catch(Exception e)
+            {
+                produtos = new List<IEstoque>();
+            }
+
+            stream.Close();
         }
     }
 }
